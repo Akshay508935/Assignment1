@@ -1,0 +1,244 @@
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Security.Principal;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace ConsoleApp2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+            // Q1  Basic Calculator 
+            /*int n;
+            int sum = 0;
+            Console.Write("Enter the size of array ");
+            n = Int32.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+            for(int i =0;i<n;i++)
+            {
+                arr[i] = Int32.Parse(Console.ReadLine());
+            }
+            for(int i =0;i<n;i++)
+            {
+                sum = sum + arr[i];
+            }
+            Console.WriteLine(sum);
+            */
+            //Q2 floating Point array using a loop
+            /*int n;
+            float f = 0;
+            float sum = 0;
+            Console.Write("Enter the size of array ");
+            n = Int32.Parse(Console.ReadLine());
+            float[] arr = new float[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = Int32.Parse(Console.ReadLine());
+            }
+
+            for (int i = 0; i < n; i++)
+            {
+                sum = sum + arr[i];
+
+            }
+            f = (sum / n);
+            Console.Write(f);
+            */
+
+            //Q3 Largest ELements Find in a array 
+            /*int large=0;
+            int n;
+            Console.Write("Enter the size of array ");
+            n = Int32.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+            for (int i = 0; i < n; i++)
+            {
+                arr[i] = Int32.Parse(Console.ReadLine());
+            }
+         
+            for(int i=0;i<n;i++)
+            {
+                large = arr[0];
+                if (arr[i]>large)
+                {
+                    large = arr[i];
+                }
+
+            }
+            Console.Write(large);
+            */
+
+            //Q4 Counts No of male and female
+
+
+            /*int Male = 0;
+            int Female = 0;
+             int n;
+            Console.Write("Enter the size of array ");
+            n = Int32.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+            for(int i =0;i<n;i++)
+            {
+                arr[i] = Int32.Parse(Console.ReadLine());
+            }
+            for(int i=0;i<n;i++)
+
+            {
+                if (arr[i]%2==0)
+                {
+                    Male = Male + 1;
+                }
+                else
+                {
+                    Female = Female + 1;
+                }
+                
+            }
+            Console.WriteLine(Male);
+            Console.Write(Female);
+            */
+
+
+            //Q5  Reverse a Array 
+
+            /*
+             int n;
+            Console.Write("Enter the size of array ");
+            n = Int32.Parse(Console.ReadLine());
+            int[] arr = new int[n];
+            for(int i =0;i<n;i++)
+            {
+                arr[i] = Int32.Parse(Console.ReadLine());
+            }
+            for(int i=n-1;i>=0;i--)
+            {
+                Console.Write(arr[i]);
+            }
+            */
+
+            //Q6  Specific Factor
+            /* int[] measurements = { 2, 4, 6, 8 };
+             int f = 3;
+             for (int i = 0; i < measurements.Length; i++)
+             {
+                 measurements[i] *= f;
+             }
+             Console.WriteLine("Modified measurements:");
+             foreach (int measurement in measurements)
+             {
+                 Console.WriteLine(measurement);
+             }*/
+
+            // Q7 Write a C# program that searches for a specific value in an integer array using a loop and returns its index if found.
+
+            /* int[] bookCodes = { 101, 203, 304, 405, 506 };
+             int searchCode = 304;
+
+
+             int index = -1;
+
+
+             for (int i = 0; i < bookCodes.Length; i++)
+             {
+                 if (bookCodes[i] == searchCode)
+                 {
+                     index = i;
+                     break;
+                 }
+             }
+
+
+             if (index != -1)
+             {
+                 Console.WriteLine($"Book with code {searchCode} found at index {index}.");
+             }
+             else
+             {
+                 Console.WriteLine($"Book with code {searchCode} not found.");
+             }*/
+
+            // Q8 Second Smallest Element 
+
+
+            /*int[] grades = { 56, 78, 89, 45, 67 };
+                Array.Sort(grades);
+            int secondSmallest = grades[1];
+                Console.WriteLine("The second smallest grade is: {secondSmallest}");
+            */
+            // Q9  // Removes Duplicates 
+
+            /* int[] ids = { 102, 215, 102, 324, 215 };
+
+             List<int> uniqueIds = new List<int>();
+
+             for (int i = 0; i < ids.Length; i++)
+             {
+                 bool isDuplicate = false;
+                 for (int j = 0; j < uniqueIds.Count; j++)
+                 {
+                     if (ids[i] == uniqueIds[j])
+                     {
+                         isDuplicate = true;
+                         break;
+                     }
+                 }
+                 if (!isDuplicate)
+                 {
+                     uniqueIds.Add(ids[i]);
+                 }
+             }
+
+
+             Console.WriteLine("Cleaned list of unique IDs:");
+             foreach (int id in uniqueIds)
+             {
+                 Console.WriteLine(id);
+             }*/
+
+            // Q10 Finds the Common elements between two arrays 
+
+           /* int[] dataset1 = { 1, 2, 3, 4, 5 };
+            int[] dataset2 = { 3, 4, 5, 6, 7 };
+
+
+            List<int> commonElements = new List<int>();
+
+
+            for (int i = 0; i < dataset1.Length; i++)
+            {
+
+                for (int j = 0; j < dataset2.Length; j++)
+                {
+
+                    if (dataset1[i] == dataset2[j])
+                    {
+
+                        if (!commonElements.Contains(dataset1[i]))
+                        {
+                            commonElements.Add(dataset1[i]);
+                        }
+                    }
+                }
+            }
+
+
+            Console.WriteLine("Common elements between the two datasets:");
+            foreach (int element in commonElements)
+            {
+                Console.WriteLine(element);
+            }*/
+
+        }
+    }
+}
+   
+
+           
+        
